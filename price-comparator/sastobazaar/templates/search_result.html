@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Result</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body style="background-color:purple;">
+<!--<div style="background-color:yellow;">-->
+<div style="float:left;background-color:blue;">
+<h1>Daraz</h1>
+{% for result in results %}
+<div class="polaroid">
+  <img src="https://nepbay.com/file/abstractauction/gallery/2016/10/apple-iphone-7-plus_500.jpg" alt="Norway" style="width:250px">
+  <div class="container">
+    <p>{{result.title}}</p>
+      <p>{{result.price}}</p>
+
+  </div>
+</div>
+
+{% endfor %}
+</div>
+
+
+<div style="float:right;background-color:red;">
+<h1>NepBay</h1>
+{% for result in results1 %}
+<div class="polaroid">
+  <img src="https://nepbay.com/file/abstractauction/gallery/2016/10/apple-iphone-7-plus_500.jpg" alt="Norway" style="width:250px">
+  <div class="container">
+    <p>{{result.title}}</p>
+      <p>{{result.price}}</p>
+    <br/>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+<!--</div>-->
+</body>
+</html>
